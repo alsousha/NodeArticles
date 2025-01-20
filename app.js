@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use('/users', userRoutes);
 app.use('/prods', productRoutes);
-app.use('/article', articleRoutes);
+app.use('/post', articleRoutes);
 app.use((err, req, res, next) => {
   console.error(err); // Log error
   res.status(500).json({
