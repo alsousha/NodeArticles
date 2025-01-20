@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
 const { id } = req.params;
 const { title, content, author } = req.body;
-const query = 'UPDATE articles SET title = ?, content = ? author = ? WHERE id = ?';
+const query = 'UPDATE articles SET title = ?, content = ?, author = ? WHERE id = ?';
 db.query(query, [title, content, author, id], (err, results) => {
     if (err) {
     res.status(500).send(err);
